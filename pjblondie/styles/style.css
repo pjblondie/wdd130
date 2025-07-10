@@ -1,20 +1,87 @@
 body{
  background-color: rgb(23, 23, 23);
  font-size: 22px;
- color: white
+ color: white;
+ white-space: normal;
 }
+h2{
+    font-size: 35px;
+}
+
 .subpage_title{
     text-align: center;
     padding: 35px
 }
 .sub_hero_image{
-    width:50%;
-    max-height: 100%;
-    padding:15px
+    max-width:100%;
+    max-height:auto;
+    object-fit: cover;
+}
+.san_francisco_main{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: auto auto auto;
+   gap: 20px;
+   padding: 10px;
+   max-width: 1000px;
+   margin:auto;
+}
+.seattle_main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+    padding: 10px;
+    max-width: 1000px;
+    margin:auto;
+}
+#smoking_photo{
+    grid-column: 1/2;
+    width: 100%;
+}
+#bridge_photo{
+    grid-column: 2/3;
+    width: 100%;
+}
+.hero_image{
+    max-width: 100%;
+    grid-column: 1/-1;
+    height: auto;
+}
+
+#san_francisco_about{
+    padding: 10px;
+    background-color: rgb(30, 30, 30);
+    grid-column: 2/3;
+    max-width: 400px;
+    height:auto;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-size: 25px;
+}
+#seattle_about{
+    padding: 10px;
+    background-color: rgb(30, 30, 30);
+    grid-column: 1/2;
+    max-width: 400px;
+    height:auto;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-size: 25px;
 }
 .paragraph_img{
-    max-width: 50%;
-    max-height: 100%;
+    max-width: 100%;
+    height: auto;
+    align-self: start;
+    grid-column: 1/2;
+}
+.paragraph_img_s{
+    max-width: 100%;
+    height: auto;
+    align-self: start;
+    grid-column: 2/3;
 }
 header{
     display:grid;
@@ -58,8 +125,7 @@ nav a{
 #sanfran_main, #seattle_main{
     display: none;
     max-width: 100%;
-    ;
-    max-width: 800px;
+    max-width: 1000px;
 }
 #sanfran_main.active, #seattle_main.active {
     display: block;
