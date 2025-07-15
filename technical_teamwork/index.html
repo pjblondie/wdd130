@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <!-- The small logo for the game is to be added here, it isn't necissary but is filler for right now, 
@@ -15,7 +16,7 @@
             <nav> 
                 <a href="index.html">Home</a>
                 <a href="lore.html">Lore</a>
-                <a href="characters.html">Characters</a>
+                <a href="lore.html">Characters</a>
                 <a href="download.html">Download</a>
                 <a href="developers.html">Meet the Devs</a>
             </nav> 
@@ -25,18 +26,22 @@
 the h1 title text appear on top of it and then styled. The button should also be styled ontop of the image, 
 below the title of the game.
 -->
-    <div id="hero_text">
-        <h1>TRIVIA SHROOMS ADVENTURE</h1>
-        <button id="download_button">Play Now</button>
-        <script>
-            document.getElementById("download_button").addEventListener("click", function() {
-                window.location.href = "download.html";
-            });
-        </script>
-    </div>
+
+<div id="hero_text">
+    <h1>TRIVIA SHROOMS ADVENTURE</h1>
+    <button id="download_button" style="background: none; border: none; padding: 0;">
+        <img src="images/PLAY.png" width="300" alt="Play Button">
+    </button>
+</div>
+
+<script>
+    document.getElementById("download_button").addEventListener("click", function() {
+        window.location.href = "download.html";
+    });
+</script>
     <div id ="hero">
         <div id="hero_box">
-            <img class="hero_image" src="images/">
+            <img class="hero_image" src="images/banner.png">
         </div>
     </div>
     <!-- a button linking to the lore html with <script> (yet to be made) Filler text, filler image, H2 Header use for CSS -->
@@ -57,18 +62,19 @@ below the title of the game.
     <!--On the wireframe multiple characters were present, slots for character images and explaining text, along with a button linking to character html-->  
     </section class="characters_main">
         <h2>CHARACTERS</h2>
-        <p id="characters_p_text">_filler_text__filler_text__filler_text__filler_text__filler_text__filler_text_</p>
         <div id="character_1">
-            <img class="characters_image" src="images/">
+            <img class="characters_image" src="images/front_mushroom.png">
             <p>_filler_text__filler_text__filler_text__filler_text__filler_text__filler_text_</p>
+            
         </div>
-        <div id="character_2">
-            <img class="characters_image" src="images/">
-            <p>_filler_text__filler_text__filler_text__filler_text__filler_text__filler_text_</p>
-        </div>
-        <div id="character_3">
-            <img class="characters_image" src="images/">
-            <p>_filler_text__filler_text__filler_text__filler_text__filler_text__filler_text_</p>
+        <script>
+            document.getElementById("lore_button").addEventListener("click", function() {
+                window.location.href = "lore.html";
+            });
+        </script>
+        
+            
+            
         </div>
         <section>
             <button id="characters_button">Read More</button>

@@ -6,6 +6,7 @@ body{
 }
 h2{
     font-size: 35px;
+    padding-bottom: 20px;
 }
 
 .subpage_title{
@@ -59,6 +60,7 @@ h2{
     word-wrap: break-word;
     overflow-wrap: break-word;
     font-size: 25px;
+    word-spacing: 3px;
 }
 #seattle_about{
     padding: 10px;
