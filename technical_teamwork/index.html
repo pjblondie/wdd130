@@ -46,8 +46,11 @@ below the title of the game.
     <!-- a button linking to the lore html with <script> (yet to be made) Filler text, filler image, H2 Header use for CSS -->
     <section>
         <h2>LORE</h2>
+        <p>_filler_text__filler_text__filler_text__filler_text__filler_text__filler_text_</p>
         <section>
-            <button id="lore_button">Read More</button>
+            <button id="characters_button" style="background: none; border: none; padding: 0;">
+                <img src="images/readmore.png" width="300" alt="Play Button">
+                    </button>
         
             <script>
                 document.getElementById("lore_button").addEventListener("click", function() {
@@ -58,23 +61,20 @@ below the title of the game.
 
     </section> 
     <!--On the wireframe multiple characters were present, slots for character images and explaining text, along with a button linking to character html-->  
-    </section class="characters_main">
-        <h2>CHARACTERS</h2>
-        <div id="character_1">
-            <img class="characters_image" src="images/front_mushroom.png">
-            <p>_filler_text__filler_text__filler_text__filler_text__filler_text__filler_text_</p>
-        </div>
+    <h2>CHARACTERS</h2>
+<div class="characters_main">
+        <img class="characters_image" src="images/front_mushroom.png">
+        <p id="characters_text">_filler_text__filler_text__filler_text__filler_text__filler_text__filler_text_</p>
         <script>
             document.getElementById("lore_button").addEventListener("click", function() {
                 window.location.href = "lore.html";
             });
         </script>
-        
-            
-            
-        </div>
+</div>
         <section>
-            <button id="characters_button">Read More</button>
+            <button id="characters_button" style="background: none; border: none; padding: 0;">
+        <img src="images/readmore.png" width="300" alt="Play Button">
+            </button>
             <script>
                 document.getElementById("characters_button").addEventListener("click", function() {
                     window.location.href = "lore.html";
@@ -84,16 +84,19 @@ below the title of the game.
         <!--We may need an image for all of the devs and artists-->
         <section>
             <h2>MEET THE DEVS</h2>
-            <section>
-                <button id="dev_button">Our Story</button>
-                <img class="devs_image" src="images">
+            
+                
+                <img class="devs_image" src="images/group.jpg">
                 <p id="lore_p_text">_filler_text__filler_text__filler_text__filler_text__filler_text__filler_text_</p>
+                <button id="dev_button" style="background: none; border: none; padding: 0;">
+                    <img src="images/ourstory.png" width="300" alt="Play Button">
+                </button>
                 <script>
                     document.getElementById("dev_button").addEventListener("click", function() {
                         window.location.href = "developers.html";
                     });
                 </script>
-            </section>
+            
     </section>
     <footer>
     <!-- Footer has a small logo alongside the company copyright and with our socials attached(yet to be added)-->
