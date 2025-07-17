@@ -108,6 +108,9 @@ h1{
 #dev_button img:hover{
     transform: scale(1.2);
 }
+#lore_button img:hover{
+    transform: scale(1.2);
+}
 /* Section Styling */
 section {
     padding: 60px 20px;
@@ -125,9 +128,9 @@ h2 {
 
 button {
     cursor: url('../images/cursor2.png'), pointer !important;
-    background: none;  /* optional: remove default button background */
-    border: none;      /* optional: remove default border */
-    padding: 0;        /* optional: reset padding */
+    background: none; 
+    border: none;      
+    padding: 0;        
 }
 /* Grid layout*/
 .characters_main {
