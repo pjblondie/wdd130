@@ -12,6 +12,8 @@ body {
     background-color: #f4f4f4;
     color: #333;
     cursor: url('../images/cursor1.png'), auto;
+    font-size: 25px;
+    font-weight: 200;
 }
 a, button, input[type="button"], input[type="submit"] {
     cursor: url('../images/cursor2.png'), pointer;
@@ -77,6 +79,9 @@ nav a:hover {
     z-index: 6;
 }
 
+h1{
+ text-align: center;
+}
 #hero_text h1 {
     font-size: 115px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
@@ -91,6 +96,7 @@ nav a:hover {
     border-radius: 8px;
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    
 }
 #download_button img:hover {
     transform: scale(1.2); /* 10% bigger */
@@ -193,6 +199,94 @@ footer .social a img {
     height: 30px;
     margin: 0 10px;
 }
+
+/* Team Code Section*/
+.main-content {
+    display: grid;
+    gap: 6rem;
+  }
+  
+  .main-content img {
+    max-width: 100%;
+  }
+  
+  .main-content .card,
+  .main-content .reverse-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .main-content .card .card-img,
+  .main-content .reverse-card .card-img {
+    margin: 0 auto;
+    justify-self: center;
+  }
+  
+  .main-content .card .card-img {
+    grid-column: 1/2;
+  }
+  
+  .main-content .card .text-container {
+    grid-column: 2/3;
+    text-align: justify,center;
+  }
+  
+  .main-content .reverse-card .card-img {
+    grid-column: 2/3;
+  }
+  
+  .main-content .reverse-card .text-container {
+    grid-column: 1/2;
+    text-align: justify,center;
+  }
+/*Kelson's CSS*/
+
+.lore_card {
+    background-color: #fff;
+    color: #333;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+#lore_content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.lore_nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.lore_nav button {
+    background-color: #252525;
+    color: #ffcc00;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.lore_nav button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.lore_nav button:hover:not(:disabled) {
+    background-color: #3e403f;
+}
+
+/*End of Kelson's CSS*/
+
+
 
 /* Responsive */
 @media (max-width: 768px) {

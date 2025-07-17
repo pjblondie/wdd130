@@ -54,7 +54,7 @@ h2{
     padding: 10px;
     background-color: rgb(30, 30, 30);
     grid-column: 2/3;
-    max-width: 400px;
+    max-width: 100%;
     height:auto;
     white-space: normal;
     word-wrap: break-word;
@@ -67,11 +67,23 @@ h2{
     background-color: rgb(30, 30, 30);
     grid-column: 1/2;
     max-width: 400px;
-    height:auto;
+    height:100%;
     white-space: normal;
     word-wrap: break-word;
     overflow-wrap: break-word;
     font-size: 25px;
+    grid-row: 1/2;
+    word-spacing: 3px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: -20px;
+}
+.seattle_text_image {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 20px;
+  grid-column: 1 / -1;
 }
 .paragraph_img{
     max-width: 100%;
@@ -84,6 +96,8 @@ h2{
     height: auto;
     align-self: start;
     grid-column: 2/3;
+    grid-row: 1/2;
+    align-items: center;
 }
 header{
     display:grid;
