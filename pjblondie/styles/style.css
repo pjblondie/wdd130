@@ -4,8 +4,24 @@ body{
  color: white;
  white-space: normal;
 }
+h1{
+    padding: 10px;
+    padding-right: 30px;
+    display:flex;
+    justify-content: center;
+    
+}
+#homeless{
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 40px;
+    word-spacing: 10px;
+    gap: 15px;
+    
+}
 h2{
-    font-size: 35px;
+    font-size: 45px;
     padding-bottom: 20px;
 }
 
@@ -163,7 +179,9 @@ nav a{
     cursor: pointer;
     transition: all 0.2s ease;
 }
-
+#homelessness{
+    text-align: center;
+}
 #left-arrow:hover, #right-arrow:hover {
     background-color: white;
     color: black;
