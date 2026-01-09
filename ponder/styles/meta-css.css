@@ -1,0 +1,19 @@
+#content{
+    margin:auto;
+    background-color: lightgray;
+    text-align: center;
+    width: 60%;
+    height:90%;
+    margin-top: 10px;
+}
+hr{
+    height:4px;
+    background-color: rgb(14, 92, 144);
+}
+
+#coding_pics{
+    max-width: 300px;
+}
+#colored_text{
+    color: rgb(14, 92, 144);
+}
