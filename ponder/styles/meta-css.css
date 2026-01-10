@@ -1,19 +1,31 @@
+body{
+   
+}
 #content{
     margin:auto;
-    background-color: lightgray;
+    background-color: rgb(225, 225, 225);
     text-align: center;
-    width: 60%;
+    width: 90%;
     height:90%;
     margin-top: 10px;
+    padding: 45px;
 }
 hr{
-    height:4px;
+    height:2px;
     background-color: rgb(14, 92, 144);
+    width:30%
 }
 
 #coding_pics{
-    max-width: 300px;
+    max-width: 25%;
 }
 #colored_text{
     color: rgb(14, 92, 144);
+}
+.list{
+    width: 25%;
+    margin: auto;
+    text-align: left;
+    padding: 0;
+    list-style: none;
 }
