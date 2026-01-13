@@ -1,12 +1,18 @@
 
+body{
+    background-color: rgb(225, 225, 225);
+}
 #content{
     margin:auto;
-    background-color: rgb(225, 225, 225);
     text-align: center;
     width: 90%;
     height:90%;
     margin-top: 10px;
     padding: 45px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: darkgray;
+    
 }
 hr{
     height:2px;
