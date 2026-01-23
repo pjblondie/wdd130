@@ -1,7 +1,14 @@
+:root{
+    --bgColor:white; 
+    --textColor:black;
+}
+
 body{
     max-width: 100%;
     text-align: center;
-    margin-top: 3%
+    margin-top: 3%;
+    background-color: var(--bgColor);
+    color: var(--textColor);
     
 }
 hr{
@@ -16,6 +23,10 @@ h3{
 }
 .byui_logo{
 width: 10%;
+}
+.byui_logo_white{
+    display: none;
+    width: 10%;
 }
 p{
     margin-bottom: .1em;
