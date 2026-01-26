@@ -1,0 +1,29 @@
+body{
+    font-family: sans-serif;
+    display: inline-flexbox;
+}
+
+header, footer{
+    background-color: rgb(49, 121, 255);
+    color: white;
+    text-align: center;
+}
+
+main{
+    background-color: rgb(192, 192, 192);
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.menu_btn{
+    background-color: transparent;
+    color:white;
+    border: none;
+     text-align: center;
+}
+h2{
+    text-align: center;
+}
+#cool_pics{
+    text-align: center;
+}
