@@ -7,8 +7,13 @@ header, footer{
     background-color: rgb(49, 121, 255);
     color: white;
     text-align: center;
+    
+    padding: 5px;
 }
-
+header, footer, main{
+    max-width: 1000px;
+    margin: auto;
+}
 main{
     background-color: rgb(192, 192, 192);
     display: grid;
@@ -19,11 +24,20 @@ main{
     background-color: transparent;
     color:white;
     border: none;
-     text-align: center;
+    text-align: center;
+    font-size: large;
+}
+nav{
+    display: none;
 }
 h2{
     text-align: center;
 }
 #cool_pics{
     text-align: center;
+    padding: 5px;
+}
+img{
+    border: 4px solid white;
+    box-shadow: 0px 3px 6px;
 }
