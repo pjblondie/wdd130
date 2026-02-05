@@ -22,10 +22,12 @@ section {
   margin: 1em;
   border: 1px solid #ccc;
 }
+nav{
+    display:none
+}
 nav a {
     padding: 20px;
     color: black;
-    display: none;
 }
 nav a:hover {
     text-decoration: none;
@@ -45,6 +47,20 @@ nav a:hover {
 footer {
     text-align: center;
 }
+          
+.change1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+.change2 {opacity: 0;}
+  
+.change3{
+    transform: translate(0, -7px) rotate(45deg);
+  }
+.show{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+}
 
 
 @media screen and (min-width: 700px) {
@@ -62,12 +78,10 @@ footer {
         text-align: center;
 
     }
-
     nav{
-        text-align: right;
-    }
-    nav a{
-        display: inline-block;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
 
 }
