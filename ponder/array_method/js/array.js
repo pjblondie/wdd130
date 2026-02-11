@@ -1,4 +1,6 @@
 
+const grades = ['A', 'B', 'C', 'D', 'F']
+
 function convert(grade) {
     switch (grade){
         case 'A':
@@ -26,12 +28,17 @@ const words = ['watermelon', 'peach', 'apple', 'tomato', 'grape'];
 
 
 const students = [
-    {last: 'Andrus', first: 'Aaron'},
-    {last: 'Masa', first:'Manny'},
-    {last: 'Tanda', first: 'Tamanda'}
+    {last: 'Andrus', first: 'Aaron', grade: 'A'},
+    {last: 'Masa', first:'Manny', grade: 'B'},
+    {last: 'Tanda', first: 'Tamanda', grade: 'C'},
 ];
 words.map(word => `<li>${word}</li>`).join('');
 
-const studentNames = students.map(studentName => `<div><h2>${studentName.first} ${studentName.last}</h2> <hr></div>`).join('')
+const studentNames = students.map(studentName => `<div
+    <h2>${studentName.first} ${studentName.last} | Letter Grade:  ${studentName.grade} |</h2>
+    <li></li>
+     <hr>
+     </div>`).join('')
+
 document.querySelector('#js_names').innerHTML = studentNames
 
