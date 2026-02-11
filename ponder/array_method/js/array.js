@@ -24,9 +24,13 @@ function convert(grade) {
 
 const words = ['watermelon', 'peach', 'apple', 'tomato', 'grape'];
 
+
 const students = [
     {last: 'Andrus', first: 'Aaron'},
     {last: 'Masa', first:'Manny'},
     {last: 'Tanda', first: 'Tamanda'}
 ];
-          
+words.map(word => `<li>${word}</li>`);
+
+const studentNames = students.map(studentName => `<h2>${studentName.first} ${studentName.last}</h2> <hr>`).join('')
+document.querySelector('#js_names').innerHTML = studentNames
