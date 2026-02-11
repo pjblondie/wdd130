@@ -30,7 +30,8 @@ const students = [
     {last: 'Masa', first:'Manny'},
     {last: 'Tanda', first: 'Tamanda'}
 ];
-words.map(word => `<li>${word}</li>`);
+words.map(word => `<li>${word}</li>`).join('');
 
-const studentNames = students.map(studentName => `<h2>${studentName.first} ${studentName.last}</h2> <hr>`).join('')
+const studentNames = students.map(studentName => `<div><h2>${studentName.first} ${studentName.last}</h2> <hr></div>`).join('')
 document.querySelector('#js_names').innerHTML = studentNames
+

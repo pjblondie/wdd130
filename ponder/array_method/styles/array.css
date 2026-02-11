@@ -1,0 +1,11 @@
+header{
+    text-align: center;
+    align-items: center;
+}
+
+#js_names{
+    text-align: center;
+    align-items: center; 
+    
+    flex-direction: column;
+}
