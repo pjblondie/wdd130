@@ -54,7 +54,31 @@ const students = [
     {last: 'Andrus', first: 'Aaron', grade: 'A'},
     {last: 'Masa', first:'Manny', grade: 'B'},
     {last: 'Tanda', first: 'Tamanda', grade: 'C'},
+    {last: 'Parker', first: 'Peter', grade: 'D'},
 ];
+
+
+const pointValues = students.map(student => {
+    return convert(student.grade);
+});
+console.log(pointValues); 
+
+let valueSum = 0;
+let valueAvr = 0;
+pointValues.forEach(value => {
+    const totalNumbers = pointValues.length
+    
+    valueSum += value;
+    valAvr = valueSum/totalNumbers
+   
+
+
+})
+
+
+console.log(valueSum);
+console.log(valAvr)
+
 
 
 words.map(word => `<li>${word}</li>`).join('');
