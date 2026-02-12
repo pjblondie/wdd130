@@ -24,6 +24,29 @@ function convert(grade) {
     return points;
 }
 
+function Lconvert(points) {
+    switch (points){
+        case 4:
+            letterPoints = 'four';
+            break;
+        case 3:
+            letterPoints = 'three';
+            break;
+        case 2:
+            letterPoints = 'two';
+            break;
+        case 1:
+            letterPoints = 'one';
+            break;
+        case 0:
+            letterPoints = 'zero';
+            break;
+        default:
+            alert('not a valid number');
+    }
+    return letterPoints;
+}
+
 const words = ['watermelon', 'peach', 'apple', 'tomato', 'grape'];
 
 
@@ -32,9 +55,26 @@ const students = [
     {last: 'Masa', first:'Manny', grade: 'B'},
     {last: 'Tanda', first: 'Tamanda', grade: 'C'},
 ];
+
+
 words.map(word => `<li>${word}</li>`).join('');
 
-const studentNames = students.map(studentName => `<div
+const studentPoints = students.map(student => {
+    const points = convert(student.grade)
+    console.log(points)
+    const lPoints = Lconvert(points)
+    console.log(lPoints)
+    return `<li>${lPoints}</li>`   
+}).join('');
+
+
+
+
+
+
+document.querySelector("#gradePoint").innerHTML = studentPoints 
+
+const studentNames = students.map(studentName => `<div>
     <h2>${studentName.first} ${studentName.last} | Letter Grade:  ${studentName.grade} |</h2>
     <li></li>
      <hr>
