@@ -1,12 +1,13 @@
 let wounds;
 let currentRank;
-
 let characterName;
 
 
 // currentRank="Sergant"
 characterName = document.getElementById("characterName");
 
+wounds = 5;
+document.getElementById("wounds").textContent=wounds;
 function WoundsCalc(){
 if(currentRank == "Sergant"){
     wounds = 5;
@@ -20,12 +21,13 @@ else if(currentRank == "Chapter Master"){
     wounds = 10;
     document.getElementById("wounds").textContent=wounds;
 }
-else if(currentRank == "intercessor"){
-    wounds = 10;
+else if(currentRank == "Marine"){
+    wounds = 2;
     document.getElementById("wounds").textContent=wounds;
 }
 }
 document.getElementById("attack").onclick =function(){
+    if(wounds >= 1)
     wounds -= 1;
     console.log(wounds);
     document.getElementById("wounds").textContent=wounds
