@@ -2,8 +2,6 @@ let wounds;
 let currentRank;
 let characterName;
 
-
-// currentRank="Sergant"
 characterName = document.getElementById("characterName");
 
 wounds = 5;
