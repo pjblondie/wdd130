@@ -341,4 +341,15 @@ renderRecipes(recipes);
 
 // INPUTS
 
-search = document.getElementById("").value;
+
+function searchHandler() {
+    const search = document.getElementById("findRecipe").value.toLowerCase();
+
+    const filteredRecipes = recipes.filter(function(recipe) {
+        return recipe.name.toLowerCase().includes(search) || 
+               recipe.description.toLowerCase().includes(search);
+    });
+    renderRecipes(filteredRecipes);
+}
+const searchButton = document.getElementById("spyglass");
+searchButton.addEventListener("click", searchHandler);
