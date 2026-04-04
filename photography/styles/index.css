@@ -41,7 +41,7 @@ header h1, header h2, header a {
 }
 
 nav {
-    display: none; /* Hidden on mobile by default */
+    display: none; 
 }
 
 /* ============================================================ */
