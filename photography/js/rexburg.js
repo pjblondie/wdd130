@@ -26,7 +26,7 @@ window.addEventListener("DOMContentLoaded", function() {
         const item = RexburgData[currentIndex];
  
         mainImage.src = "images/Rexburg_webp/" + item.src;
-        mainImage.alt = "San Francisco Photo Group " + item.group;
+        mainImage.alt = "Rexburg Photo Group " + item.group;
     }
 
     nextButton.onclick = function() {
