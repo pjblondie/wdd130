@@ -143,7 +143,7 @@ footer {
     align-items: center;
     gap: 20px;
     padding: 30px;
-    margin-top: auto;
+   
     width: 100%;
     box-sizing: border-box;
 }
@@ -168,6 +168,7 @@ footer h2 {
     display: flex;       
     justify-content: center;
     align-items: center;
+    margin-top: -5px;
 }
 
 .icons img{
@@ -179,6 +180,8 @@ footer h2 {
     width: 5em;
     display: flex;
     align-items: center;
+    margin-top: -5px;
+   
 }
 .youtube_icon img{
     max-width: 100%;
