@@ -1,3 +1,6 @@
+/* ============================================================ */
+/* 1. CORE VARIABLES & DEFAULTS                                 */
+/* ============================================================ */
 :root {
     --primary: #474440;
     --secondary: #D5C8B6;
@@ -21,6 +24,9 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
 }
 
+/* ============================================================ */
+/* 2. HEADER & NAVIGATION                                      */
+/* ============================================================ */
 header {
     background-color: var(--primary);
     color: var(--accent2);
@@ -35,9 +41,113 @@ header h1, header h2, header a {
 }
 
 nav {
-    display: none;
+    display: none; /* Hidden on mobile by default */
 }
 
+/* ============================================================ */
+/* Hover Animation for Links
+/* ============================================================ */
+
+
+header a, nav a, footer a {
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Nav Underlining */
+header a::after, nav a::after, footer a::after {
+    content: '';
+    position: absolute;
+    width: 0;          
+    height: 2px;       
+    bottom: -5px;      
+    left: 50%;        
+    background-color: var(--secondary); 
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+
+header a:hover::after, nav a:hover::after, footer a:hover::after {
+    width: 100%;
+}
+
+header a:hover, nav a:hover {
+    color: var(--secondary);
+}
+/* ============================================================ */
+/* 3. GALLERY LAYOUT
+/* ============================================================ */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+#img_gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; 
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 95%; 
+}
+
+/* The Photo Frame */
+#current_img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff; /* White Matting */
+    border: 1px solid var(--secondary);
+    padding: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    
+    /* Consistent Size logic */
+    max-width: 700px;    
+    aspect-ratio: 3 / 2; 
+    margin: 0 auto;
+}
+
+#current_img img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* Minimalist Circle Buttons */
+#move_left, #move_right {
+    background-color: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    width: 50px;  
+    height: 50px; 
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+    flex-shrink: 0; 
+}
+
+#move_left:hover, #move_right:hover {
+    background-color: var(--primary);
+    color: var(--accent2);
+}
+
+/* ============================================================ */
+/* 4. FOOTER & SOCIAL ICONS                                    */
+/* ============================================================ */
 footer {
     background-color: var(--primary);
     color: var(--accent2);
@@ -46,17 +156,16 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    padding: 20px;
+    padding: 30px;
     margin-top: auto;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 footer h2 {
     color: var(--accent2);
-}
-
-#img_gallery {
-    display: flex;
-    justify-content: center;
+    margin: 0;
+    font-size: 1.1rem;
 }
 
 .social {
@@ -64,26 +173,26 @@ footer h2 {
     flex-direction: row;      
     justify-content: center;
     align-items: center;
-    gap: 10px;              
+    gap: 20px;              
 }
 
+/* Restored Social Icon Sizes */
 .icons, .youtube_icon {
-    width: 4em;
+    width: 35px;  /* Fixed size ensures they stay small */
+    height: 35px; 
     display: flex;       
     justify-content: center;
     align-items: center;
 }
 
-.icons img {
-    max-width: 40%;
+.icons img, .youtube_icon img {
+    max-width: 100%;
     height: auto;
 }
 
-.youtube_icon img {
-    max-width: 90%;
-    height: auto;
-}
-
+/* ============================================================ */
+/* 5. RESPONSIVE MEDIA QUERIES                                 */
+/* ============================================================ */
 @media (min-width: 850px) {
     header {
         display: flex;
@@ -103,22 +212,11 @@ footer h2 {
     footer {
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
-        padding: 20px 40px; 
-        width: 100%;
-        box-sizing: border-box;
+        padding: 20px 60px; 
     }
 
-    footer h2 {
-        flex: 1;
-        margin: 0;
-    }
-
-    footer h2:first-of-type {
-        text-align: left;
-    }
-
-    footer h2:last-of-type {
-        text-align: right;
-    }
+    /* Social icons move to the center of the footer on desktop */
+    .social { order: 2; }
+    footer h2:first-of-type { order: 1; flex: 1; text-align: left; }
+    footer h2:last-of-type { order: 3; flex: 1; text-align: right; }
 }
