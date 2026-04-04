@@ -1,0 +1,124 @@
+:root {
+    --primary: #474440;
+    --secondary: #D5C8B6;
+    --accent1: #111010;
+    --accent2: #ECE9E3;
+    --heading-font: "Courier New", Courier, monospace;
+    --paragraph-font: Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--primary);  /* Flipped to dark grey */
+    color: var(--accent2);             /* Flipped to creme text */
+    font-family: var(--paragraph-font);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+}
+
+header {
+    background-color: var(--accent2);  /* Flipped to creme */
+    color: var(--accent1);             /* Flipped to dark text */
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+header h1, header h2, header a {
+    color: var(--accent1);             /* Dark text on light header */
+    text-decoration: none;
+}
+
+nav {
+    display: none;
+}
+
+footer {
+    background-color: var(--accent2);  /* Flipped to creme */
+    color: var(--accent1);             /* Flipped to dark text */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    margin-top: auto;
+}
+
+footer h2 {
+    color: var(--accent1);             /* Dark text on light footer */
+}
+
+#img_gallery {
+    display: flex;
+    justify-content: center;
+}
+
+.social {
+    display: flex;         
+    flex-direction: row;      
+    justify-content: center;
+    align-items: center;
+    gap: 10px;              
+}
+
+.icons, .youtube_icon {
+    width: 4em;
+    display: flex;       
+    justify-content: center;
+    align-items: center;
+}
+
+.icons img {
+    max-width: 40%;
+    height: auto;
+}
+
+.youtube_icon img {
+    max-width: 90%;
+    height: auto;
+}
+
+@media (min-width: 850px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    nav {
+        display: flex;  
+        list-style: none; 
+        margin: 0;
+        padding: 0;
+        padding-right: 30px;
+        gap: 20px;
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px; 
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    footer h2 {
+        flex: 1;
+        margin: 0;
+    }
+
+    footer h2:first-of-type {
+        text-align: left;
+    }
+
+    footer h2:last-of-type {
+        text-align: right;
+    }
+}
