@@ -162,7 +162,7 @@ footer h2 {
     gap: 20px;              
 }
 
-.icons, .youtube_icon {
+.icons{
     width: 35px;  
     height: 35px; 
     display: flex;       
@@ -170,9 +170,18 @@ footer h2 {
     align-items: center;
 }
 
-.icons img, .youtube_icon img {
+.icons img{
     max-width: 100%;
     height: auto;
+}
+
+.youtube_icon{
+    width: 5em;
+    display: flex;
+    align-items: center;
+}
+.youtube_icon img{
+    max-width: 100%;
 }
 
 /* ============================================================ */
