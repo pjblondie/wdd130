@@ -1,6 +1,18 @@
 const RexburgData = [
-    { src: "SanFrancisco-22.webp", group: "A" }, 
-
+    { src: "Rexburg-12.webp", group: "A" }, 
+    { src: "Rexburg-15.webp", group: "A" }, 
+    { src: "Rexburg-14.webp", group: "A" }, 
+    { src: "Rexburg-13.webp", group: "A" }, 
+    { src: "Rexburg-1.webp", group: "B" }, 
+    { src: "Rexburg-2.webp", group: "B" }, 
+    { src: "Rexburg-3.webp", group: "B" },
+    { src: "Rexburg-9.webp", group: "C" },
+    { src: "Rexburg-4.webp", group: "C" },   
+    { src: "Rexburg-10.webp", group: "C" }, 
+    { src: "Rexburg-6.webp", group: "D" }, 
+    { src: "Rexburg-7.webp", group: "D" }, 
+    { src: "Rexburg-8.webp", group: "D" }, 
+    { src: "Rexburg-16.webp", group: "D" }, 
 ];
 
 let currentIndex = 0;
@@ -13,7 +25,7 @@ window.addEventListener("DOMContentLoaded", function() {
     function displayPhoto() {
         const item = RexburgData[currentIndex];
  
-        mainImage.src = "images/San_Francisco_webp/" + item.src;
+        mainImage.src = "images/Rexburg_webp/" + item.src;
         mainImage.alt = "San Francisco Photo Group " + item.group;
     }
 
