@@ -25,13 +25,24 @@ const weddingsData = [
 let currentIndex = 0;
 
 window.addEventListener("DOMContentLoaded", function() {
+
+    // Image Functionality
     const mainImage = document.querySelector("#current_img img");
     const nextButton = document.querySelector("#move_right");
     const prevButton = document.querySelector("#move_left");
+    
+    // Menu Drop Down
+    const menuButton = document.querySelector('.menu-toggle');
+    const navigation = document.querySelector('nav');
+    
+    // Modal
+    const modal = document.querySelector("#photo-modal");
+    const modalImage = document.querySelector("#modal-image");
+    const closeModal = document.querySelector("#close-modal");
 
+    /* --- 2. GALLERY FUNCTIONS --- */
     function displayPhoto() {
         const item = weddingsData[currentIndex];
- 
         mainImage.src = "images/weddings_webp/" + item.src;
         mainImage.alt = "Weddings Photo Group " + item.group;
     }
@@ -46,16 +57,32 @@ window.addEventListener("DOMContentLoaded", function() {
         displayPhoto();
     };
 
-    displayPhoto();
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    const menuButton = document.querySelector('.menu-toggle');
-    const navigation = document.querySelector('nav');
-
+    /* --- 3. MOBILE MENU LOGIC --- */
     menuButton.addEventListener('click', () => {
-        // Toggle the "open" class on both elements
         navigation.classList.toggle('open');
         menuButton.classList.toggle('open');
     });
+
+    /* --- 4. MODAL LOGIC --- */
+    mainImage.addEventListener("click", () => {
+        const item = weddingsData[currentIndex];
+        
+        modalImage.src = "images/weddings_webp/" + item.src;
+        modalImage.alt = item.group;
+        
+        modal.showModal();
+    });
+
+    closeModal.addEventListener("click", () => {
+        modal.close();
+    });
+
+    modal.addEventListener("click", (event) => {
+        if (event.target === modal) {
+            modal.close();
+        }
+    });
+
+    /* --- 5. INITIALIZE --- */
+    displayPhoto();
 });

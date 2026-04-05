@@ -47,7 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const navigation = document.querySelector('nav');
 
     menuButton.addEventListener('click', () => {
-        // Toggle the "open" class on both elements
         navigation.classList.toggle('open');
         menuButton.classList.toggle('open');
     });

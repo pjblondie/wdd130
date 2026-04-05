@@ -11,6 +11,10 @@
 
 <body>
     <header>
+        <button class="menu-toggle" aria-label="Open navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
         <h1 id="logo">PJBLONDIE</h1>
         <nav>
             <a href="index.html">Street Photography</a>
@@ -33,8 +37,6 @@
     </div>
 
    </main>
- 
-
    <footer>
     <h2>PJBLONDIE</h2>
     <div class="social">
@@ -50,5 +52,14 @@
     </div>
     <h2>pjcblondie@gmail.com</h2>
 </footer>
+
+<dialog id="photo-modal">
+    <button id="close-modal" aria-label="Close modal">
+        <span class="x-bar"></span>
+        <span class="x-bar"></span>
+    </button>
+    <img id="modal-image" src="" alt="Full size view">
+</dialog>
+
 </body>
 </html>
