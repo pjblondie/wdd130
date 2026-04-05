@@ -48,3 +48,14 @@ window.addEventListener("DOMContentLoaded", function() {
 
     displayPhoto();
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const menuButton = document.querySelector('.menu-toggle');
+    const navigation = document.querySelector('nav');
+
+    menuButton.addEventListener('click', () => {
+        // Toggle the "open" class on both elements
+        navigation.classList.toggle('open');
+        menuButton.classList.toggle('open');
+    });
+});
