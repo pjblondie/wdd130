@@ -11,25 +11,31 @@
 <body>
 
 <header>
+
+    <button class="menu-toggle" aria-label="Open navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
+
     <h1 id="logo">PJBLONDIE</h1>
+
     <nav>
         <a href="p_index.html">Portraiture</a>
         <a href="san_francissco.html">San Francisco</a>
         <a href="index.html"> Seattle</a>
         <a href="rexburg.html">Rexburg</a>
         <a href="#">Salt Lake</a>
-        
     </nav>
 </header>
 
 <main>
 
     <div id="img_gallery">
-        <button id="move_left"><</button>
+        <button id="move_left" aria-label="left button"><</button>
             <div id="current_img">
                 <img src="#">
             </div>
-        <button id="move_right">></button>
+        <button id="move_right" aria-label="right button">></button>
         </div>
     </div>
     
@@ -50,6 +56,15 @@
     </div>
     <h2>pjcblondie@gmail.com</h2>
 </footer>
+
+<dialog id="photo-modal">
+    <button id="close-modal" aria-label="Close modal">
+        <span class="x-bar"></span>
+        <span class="x-bar"></span>
+    </button>
+    <img id="modal-image" src="" alt="Full size view">
+</dialog>
+
 
 </body>
 </html>
